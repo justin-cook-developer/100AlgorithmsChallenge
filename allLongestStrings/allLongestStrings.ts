@@ -15,4 +15,4 @@ function allLongestStrings(inputArray) {
   return longestStrings;
 }
 
-console.log(allLongestStrings(["aba", "aa", "ad", "vcd", "aba"]));
+console.log(allLongestStrings(["aba", "aa", "ad", "sdfsdfsdfsdfs", "vcd", "aba", "aaaa"]));
