@@ -21,7 +21,7 @@ areEquallyStrong(yourLeft, yourRight, friendsLeft, friendsRight) = false.
 -   None
 
 **Input/Output**
- 
+
 - **[time limit] 4000ms (js)**
 - **[input] integer yourLeft**
 
