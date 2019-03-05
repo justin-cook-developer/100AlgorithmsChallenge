@@ -1,22 +1,26 @@
 const add = (a, b) => a + b;
 const multiply = (a, b) => a * b;
 
+const transformArray = (array, combinationFunction) => {
+  const transformedArray = [];
+
+  for (let i = 0; i < array.length; i += 2) {
+    const left = array[i];
+    const right = array[i + 1];
+    const result = combinationFunction(left, right) || left;
+    transformedArray.push(result);
+  }
+
+  return transformedArray;
+}
+
 function arrayConversion(inputArray) {
   let toIterate = [...inputArray];
   let iteration = 1;
 
   while(toIterate.length > 1) {
-    const transformedArray = [];
     const combine = iteration % 2 === 1 ? add : multiply;
-
-    for (let i = 0; i < toIterate.length; i += 2) {
-      const left = toIterate[i];
-      const right = toIterate[i + 1];
-      const result = combine(left, right) || left;
-      transformedArray.push(result);
-    }
-
-    toIterate = transformedArray;
+    toIterate = transformArray(toIterate, combine);
     iteration++;
   }
 
