@@ -1,4 +1,4 @@
-### Check Out My [YouTube Channel](https://www.YouTube.com/CodingTutorials360)
+## Check Out My [YouTube Channel](https://www.YouTube.com/CodingTutorials360)
 
 ##### Algorithm Challenge Available At [CodeFights](https://codefights.com/arcade/intro/level-9/AACpNbZANCkhHWNs3)
 ---
@@ -13,10 +13,7 @@ candies(n, m) = 9.
 
 **Hints**
 -   Math.floor()
-
-**Input/Output**
-
--   **[execution time limit] 4 seconds (js)**
+*[execution time limit] 4 seconds (js)**
 
 -   **[input] integer n**
 
@@ -26,6 +23,6 @@ candies(n, m) = 9.
 -   **[input] integer m**
     The number of pieces of candy.
     *Guaranteed constraints:* 2 ≤ m ≤ 100.
-    
--   [output] integer 
+
+-   [output] integer
     The total number of pieces of candy the children will eat provided they eat as much as they can and all children eat the same amount.
