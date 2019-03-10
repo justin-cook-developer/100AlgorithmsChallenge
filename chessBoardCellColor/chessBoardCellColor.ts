@@ -1,4 +1,6 @@
-const mapToNumber = character => {
+const isEven = number => number % 2 === 0;
+
+function chessBoardCellColor(cell1, cell2) {
   const mapping = {
     'A': 1,
     'B': 2,
@@ -10,26 +12,15 @@ const mapToNumber = character => {
     'H': 8,
   };
 
-  return mapping[character] ? mapping[character] : parseInt(character);
-}
+  const x1 = mapping[cell1[0]];
+  const y1 = parseInt(cell1[1]);
+  const x2 = mapping[cell2[0]];
+  const y2 = parseInt(cell2[1]);
 
-const isEven = number => number % 2 === 0;
+  const total1 = x1 + y1;
+  const total2 = x2 + y2;
 
-function chessBoardCellColor(cell1, cell2) {
-  const [first, second] = [cell1, cell2].map(position => {
-    return position.split('').map(character => mapToNumber(character));
-  });
-
-  const x1 = first[0];
-  const y1 = first[1];
-  const x2 = second[0];
-  const y2 = second[1];
-
-  if (isEven(x1) === isEven(x2)) {
-    return isEven(y1) === isEven(y2);
-  } else if (isEven(x1) !== isEven(x2)) {
-      return isEven(y1) !== isEven(y2);
-  }
+  return isEven(total1) === isEven(total2);
 }
 
 console.log(chessBoardCellColor('B1', 'D3'));
