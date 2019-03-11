@@ -1,5 +1,13 @@
-function chunkyMonkey(arr: any[], size: number): any[][] {
-
+function chunkyMonkey(arr, size) {
+  return arr.reduce((accumulator, current, i) => {
+    if(i % size === 0) {
+      const chunk = [current];
+      return [...accumulator, chunk];
+    } else {
+      accumulator[accumulator.length - 1].push(current);
+      return accumulator;
+    }
+  }, []);
 }
 
 console.log(chunkyMonkey(["a", "b", "c", "d"], 2));
