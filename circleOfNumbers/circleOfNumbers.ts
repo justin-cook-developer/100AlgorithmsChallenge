@@ -1,5 +1,11 @@
-function circleOfNumbers(n: number, firstNumber: number): number {
+function circleOfNumbers(n, firstNumber) {
+  const half = Math.floor(n / 2);
 
+  if (firstNumber >= half) {
+    return firstNumber - half;
+  } else {
+    return firstNumber + half;
+  }
 }
 
-console.log(circleOfNumbers(10, 2));
+console.log(circleOfNumbers(10, 5));
