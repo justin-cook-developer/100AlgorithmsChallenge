@@ -1,5 +1,8 @@
-function companyBotStrategy(trainingData: number[][]): number {
- 
+function companyBotStrategy(trainingData) {
+  const correctAnswers = trainingData.filter(([_, rating]) => rating === 1);
+  const average = correctAnswers.reduce((accumulator, current) => accumulator + current[0], 0) / correctAnswers.length;
+
+  return average || 0;
 }
 
 console.log(companyBotStrategy([[3, 1], [6, 1], [4, 1], [5, 1]]));
