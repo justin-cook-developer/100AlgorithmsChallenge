@@ -1,5 +1,6 @@
-function confirmEnding(str: string, target: string) {
-   
+function confirmEnding(str, target) {
+   const ending = str.substring(str.length - target.length);
+   return target === ending;
 }
 
 console.log(confirmEnding("Abstraction", "action"));
