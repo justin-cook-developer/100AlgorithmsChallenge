@@ -1,22 +1,19 @@
 function convertString(s, t) {
-  let lastPosition = s.indexOf(t[0]);
-  if (lastPosition === -1) {
-    return false;
-  }
+  let word = '';
+  let position = 0;
 
-  for (let i = 1; i < t.length; i++) {
-    const position = s.indexOf(t[i]);
-    const latterPosition = s.lastIndexOf(t[i]);
-    if (position === -1) {
-      return false;
-    } else if (position <= lastPosition && latterPosition <= lastPosition) {
-      return false;
-    } else {
-      lastPosition = position <= lastPosition ? latterPosition : position;
+  for (let i = 0; i < s.length; i++) {
+    const character = s[i];
+    if (character === t[position]) {
+      word += character;
+      position++;
+      if (word === t) {
+        return true;
+      }
     }
   }
 
-  return true;
+  return false;
 }
 
 console.log(convertString('ceoydefthf5iyg5h5yts', 'codefights'));
