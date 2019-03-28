@@ -23,7 +23,7 @@ proCategorization(pros, preferences) = [[["Computer lessons"], ["Leon", "Maria"]
                                         [["House cleaning"], ["Jack", "Maria"]]]
 
 **Hints**
--   hasOwnProperty()
++ , last-   hasOwnProperty()
 -   push()
 -   toLowerCase()
 -   sort()
