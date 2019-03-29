@@ -29,7 +29,7 @@ Thus, there are 9 elements in the sequence.
 squareDigitsSequence(a0) = 4.
 
 The sequence goes as follows: 103 -> 10 -> 1 -> 1, 4 elements altogether.
-
+  
 **Hints**
 -   includes()
 -   push()
